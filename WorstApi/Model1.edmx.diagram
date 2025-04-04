@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9d6b5679c79f42e3b916a2c8efc39bbe" Name="Diagram1" ZoomLevel="94">
+        <EntityTypeShape EntityType="internet_magazModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="internet_magazModel.Заказ" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="internet_magazModel.Изображения_товаров" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="internet_magazModel.Категории" Width="1.5" PointX="0.625" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="internet_magazModel.Комплектующие" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="internet_magazModel.Компьютеры" Width="1.625" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="internet_magazModel.Конфигурация" Width="1.5" PointX="8.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="internet_magazModel.Пользователи" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="internet_magazModel.Статистика_по_тестам" Width="1.5" PointX="5.375" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="internet_magazModel.Популярные" Width="1.5" PointX="7.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

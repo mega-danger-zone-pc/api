@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище internet_magazModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Заказ">
+    <Key>
+      <PropertyRef Name="id_заказа" />
+    </Key>
+    <Property Name="id_заказа" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="дата" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="статус" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_пользователя" Type="int" Nullable="false" />
+    <Property Name="id_продукта" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Изображения_товаров">
+    <Key>
+      <PropertyRef Name="id_фото" />
+    </Key>
+    <Property Name="id_фото" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_продукта" Type="int" />
+    <Property Name="ссылка" Type="text" />
+  </EntityType>
+  <EntityType Name="Категории">
+    <Key>
+      <PropertyRef Name="id_категории" />
+    </Key>
+    <Property Name="id_категории" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="название" Type="varchar" MaxLength="50" />
+    <Property Name="ссылка" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Комплектующие">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Тип" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Цена" Type="int" Nullable="false" StoreGeneratedPattern="None" />
+    <Property Name="Имя" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Компьютеры">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Название" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Описание" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Количество" Type="int" Nullable="false" />
+    <Property Name="Категория" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Конфигурация">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Продукт" Type="int" Nullable="false" />
+    <Property Name="Комплектующее" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Пользователи">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Имя" Type="varchar" MaxLength="250" />
+    <Property Name="Почта" Type="varchar" MaxLength="250" />
+    <Property Name="Индекс" Type="varchar" MaxLength="250" />
+    <Property Name="Адрес" Type="varchar" MaxLength="250" />
+    <Property Name="Телефон" Type="varchar" MaxLength="250" />
+    <Property Name="Пароль" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Популярные">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="pc" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Статистика_по_тестам">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Продукт" Type="int" />
+    <Property Name="Приложение" Type="varchar" MaxLength="50" />
+    <Property Name="Разрешение" Type="varchar" MaxLength="50" />
+    <Property Name="FPS" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="Хранилище internet_magazModelContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Заказ" EntityType="Self.Заказ" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Изображения_товаров" EntityType="Self.Изображения_товаров" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Категории" EntityType="Self.Категории" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Комплектующие" EntityType="Self.Комплектующие" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Компьютеры" EntityType="Self.Компьютеры" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Конфигурация" EntityType="Self.Конфигурация" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Пользователи" EntityType="Self.Пользователи" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Популярные" EntityType="Self.Популярные" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Статистика_по_тестам" EntityType="Self.Статистика_по_тестам" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

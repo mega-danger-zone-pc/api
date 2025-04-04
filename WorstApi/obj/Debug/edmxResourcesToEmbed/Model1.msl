@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище internet_magazModelContainer" CdmEntityContainer="internet_magazEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="internet_magazModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Заказ">
+      <EntityTypeMapping TypeName="internet_magazModel.Заказ">
+        <MappingFragment StoreEntitySet="Заказ">
+          <ScalarProperty Name="id_заказа" ColumnName="id_заказа" />
+          <ScalarProperty Name="дата" ColumnName="дата" />
+          <ScalarProperty Name="статус" ColumnName="статус" />
+          <ScalarProperty Name="ID_пользователя" ColumnName="ID_пользователя" />
+          <ScalarProperty Name="id_продукта" ColumnName="id_продукта" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Изображения_товаров">
+      <EntityTypeMapping TypeName="internet_magazModel.Изображения_товаров">
+        <MappingFragment StoreEntitySet="Изображения_товаров">
+          <ScalarProperty Name="id_фото" ColumnName="id_фото" />
+          <ScalarProperty Name="id_продукта" ColumnName="id_продукта" />
+          <ScalarProperty Name="ссылка" ColumnName="ссылка" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Категории">
+      <EntityTypeMapping TypeName="internet_magazModel.Категории">
+        <MappingFragment StoreEntitySet="Категории">
+          <ScalarProperty Name="id_категории" ColumnName="id_категории" />
+          <ScalarProperty Name="название" ColumnName="название" />
+          <ScalarProperty Name="ссылка" ColumnName="ссылка" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Комплектующие">
+      <EntityTypeMapping TypeName="internet_magazModel.Комплектующие">
+        <MappingFragment StoreEntitySet="Комплектующие">
+          <ScalarProperty Name="Цена" ColumnName="Цена" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Тип" ColumnName="Тип" />
+          <ScalarProperty Name="Имя" ColumnName="Имя" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Компьютеры">
+      <EntityTypeMapping TypeName="internet_magazModel.Компьютеры">
+        <MappingFragment StoreEntitySet="Компьютеры">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Название" ColumnName="Название" />
+          <ScalarProperty Name="Описание" ColumnName="Описание" />
+          <ScalarProperty Name="Количество" ColumnName="Количество" />
+          <ScalarProperty Name="Категория" ColumnName="Категория" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Конфигурация">
+      <EntityTypeMapping TypeName="internet_magazModel.Конфигурация">
+        <MappingFragment StoreEntitySet="Конфигурация">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Продукт" ColumnName="Продукт" />
+          <ScalarProperty Name="Комплектующее" ColumnName="Комплектующее" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Пользователи">
+      <EntityTypeMapping TypeName="internet_magazModel.Пользователи">
+        <MappingFragment StoreEntitySet="Пользователи">
+          <ScalarProperty Name="Пароль" ColumnName="Пароль" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Имя" ColumnName="Имя" />
+          <ScalarProperty Name="Почта" ColumnName="Почта" />
+          <ScalarProperty Name="Индекс" ColumnName="Индекс" />
+          <ScalarProperty Name="Адрес" ColumnName="Адрес" />
+          <ScalarProperty Name="Телефон" ColumnName="Телефон" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Статистика_по_тестам">
+      <EntityTypeMapping TypeName="internet_magazModel.Статистика_по_тестам">
+        <MappingFragment StoreEntitySet="Статистика_по_тестам">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Продукт" ColumnName="Продукт" />
+          <ScalarProperty Name="Приложение" ColumnName="Приложение" />
+          <ScalarProperty Name="Разрешение" ColumnName="Разрешение" />
+          <ScalarProperty Name="FPS" ColumnName="FPS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Популярные">
+      <EntityTypeMapping TypeName="internet_magazModel.Популярные">
+        <MappingFragment StoreEntitySet="Популярные">
+          <ScalarProperty Name="pc" ColumnName="pc" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

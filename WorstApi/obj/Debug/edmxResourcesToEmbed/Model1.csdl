@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="internet_magazModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Заказ">
+    <Key>
+      <PropertyRef Name="id_заказа" />
+    </Key>
+    <Property Name="id_заказа" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="дата" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="статус" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ID_пользователя" Type="Int32" Nullable="false" />
+    <Property Name="id_продукта" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Изображения_товаров">
+    <Key>
+      <PropertyRef Name="id_фото" />
+    </Key>
+    <Property Name="id_фото" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_продукта" Type="Int32" />
+    <Property Name="ссылка" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Категории">
+    <Key>
+      <PropertyRef Name="id_категории" />
+    </Key>
+    <Property Name="id_категории" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="название" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ссылка" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Комплектующие">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Тип" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Цена" Type="Int32" Nullable="false" />
+    <Property Name="Имя" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Компьютеры">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Название" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Описание" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Количество" Type="Int32" Nullable="false" />
+    <Property Name="Категория" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Конфигурация">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Продукт" Type="Int32" Nullable="false" />
+    <Property Name="Комплектующее" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Пользователи">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Имя" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Почта" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Индекс" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Адрес" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Телефон" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Пароль" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Статистика_по_тестам">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Продукт" Type="Int32" />
+    <Property Name="Приложение" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Разрешение" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FPS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="internet_magazEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Заказ" EntityType="Self.Заказ" />
+    <EntitySet Name="Изображения_товаров" EntityType="Self.Изображения_товаров" />
+    <EntitySet Name="Категории" EntityType="Self.Категории" />
+    <EntitySet Name="Комплектующие" EntityType="Self.Комплектующие" />
+    <EntitySet Name="Компьютеры" EntityType="Self.Компьютеры" />
+    <EntitySet Name="Конфигурация" EntityType="Self.Конфигурация" />
+    <EntitySet Name="Пользователи" EntityType="Self.Пользователи" />
+    <EntitySet Name="Статистика_по_тестам" EntityType="Self.Статистика_по_тестам" />
+    <EntitySet Name="Популярные" EntityType="internet_magazModel.Популярные" />
+  </EntityContainer>
+  <EntityType Name="Популярные">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="pc" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>
